@@ -1,0 +1,82 @@
+{{ define "main" }}
+
+<!-- About -->
+<!-- Portfolio - Images link to portfolio sections-->
+<!-- Contact button in footer? -->
+
+   {{ "<!-- Banner -->" | safeHTML}}
+   {{ with .Params }}   
+   <section id="banner" class="major">
+      <div class="inner">
+         {{ $img := resources.Get .image.path }}
+         <span class="image">
+            <img src="{{ $img.RelPermalink }}" alt="" data-postion="center center"/>
+         </span>
+         
+         <header class="major">
+            <h1>{{ .Site.Title }}</h1>
+         </header>
+         <div class="content">
+            <p>
+               {{- .description -}}
+            </p>
+            <ul class="actions stacked">
+               <li><a href="#two" class="button fit next scrolly">Portfolio</a></li>
+               <li><a href="#two" class="button fit next scrolly">Market Stall</a></li>
+            </ul>
+         </div>
+      </div>
+   </section>{{ end }}
+   
+   <div id="main">
+   {{ "<!-- About -->" | safeHTML}}
+      <section id="one">
+         <div class="inner">
+            <header class="major">
+               <h3>{{ .Title }}</h3>
+            </header>
+            {{ .Content }}
+         </div>
+      </section>
+
+   {{ "<!-- Tiles -->" | safeHTML}}
+      <section id="two" class="tiles">
+         <article>
+            <span class="image">
+               <img src="images/pic01.jpg" alt="" />
+            </span>
+            <header class="major">
+               <h3><a href="landing.html" class="link">Image 1</a></h3>
+               <p>Ipsum dolor sit amet</p>
+            </header>
+         </article>
+         <article>
+            <span class="image">
+               <img src="images/pic02.jpg" alt="" />
+            </span>
+            <header class="major">
+               <h3><a href="landing.html" class="link">Image 2</a></h3>
+               <p>feugiat amet tempus</p>
+            </header>
+         </article>
+         <article>
+            <span class="image">
+               <img src="images/pic03.jpg" alt="" />
+            </span>
+            <header class="major">
+               <h3><a href="landing.html" class="link">Image 3</a></h3>
+               <p>Lorem etiam nullam</p>
+            </header>
+         </article>
+      </section>
+   </div>
+
+   {{ "<!-- Market Stall news goes here -->" | safeHTML}}
+   <!-- Is this a Hugo Template to go here? -->
+
+   {{ range .Pages }}
+   
+   <a href="{{.Permalink}}">{{ .Title }}</a><br>
+   {{end}}
+
+{{ end }}

@@ -1,0 +1,15 @@
+{{ "<!-- Menu -->" | safeHTML}}
+<nav id="menu">
+   <ul class="actions stacked">
+      {{ $currentPage := . -}}
+      {{ range .Site.Menus.main -}}
+      <li><a href="{{ .URL }}" class="button fit{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a></li>
+      {{ if .HasChildren -}}
+      <ul class="links">
+         {{ range .Children -}}
+         <li><a href="{{ .URL }}"{{ if $currentPage.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a></li>
+         {{ end -}}
+      </ul>
+      {{ end }}{{ end -}}
+   </ul>
+</nav>

@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<!-- This is going to be for sorting through the "Portfolio" and for navigating through portfolio sections -->
+
+<!-- "Market Stall dates" also needs a list page -->
+<!-- Use the columns from the "Contact" section to help design Market Stall address/date component? -->
+
+   This is list template content.
+
+   {{ range .Pages }}
+      <br><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+   {{ end }}
+{{ end }}

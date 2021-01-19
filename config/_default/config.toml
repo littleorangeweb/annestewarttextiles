@@ -1,7 +1,8 @@
 baseURL = "https://determined-neumann-138ba9.netlify.app"
 languageCode = "en-us"
 title = "Anne Stewart"
-theme = "html5up-story"
+theme = "html5up-forty"
+copyright = "Anne Stewart"
 
-[[Params.plugins]]
-link = "fonts/simple-line-icons.min.css"
+[params]
+   subtitle = "Textiles"

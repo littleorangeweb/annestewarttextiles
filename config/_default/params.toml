@@ -1,0 +1,25 @@
+# [[plugins]]
+# link = path from staticDir e.g.: "css/custom.css" or "fonts/font.min.css"
+
+[[styles]]
+# path = path from assetsDir e.g.: "scss/main.scss"
+path = "scss/main.scss"
+[[styles]]
+path = "scss/noscript.scss"
+noscript = true
+
+[[scripts]]
+# path = path from assetsDir e.g.: "js/main.js"
+path = "js/jquery.min.js"
+[[scripts]]
+path = "js/jquery.scrollex.min.js"
+[[scripts]]
+path = "js/jquery.scrolly.min.js"
+[[scripts]]
+path = "js/browser.min.js"
+[[scripts]]
+path = "js/breakpoints.min.js"
+[[scripts]]
+path = "js/util.js"
+[[scripts]]
+path = "js/main.js"
