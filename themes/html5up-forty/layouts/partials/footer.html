@@ -9,7 +9,9 @@
       <ul class="copyright">
          <li>&copy; <script>
             document.write(new Date().getFullYear())
-         </script> {{ .Site.Copyright }}</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+         </script> {{ .Site.Copyright }}</li>
+         <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+         {{ if .IsHome }}<li><div data-netlify-identity-button><i class="icon icon-settings"> </i></div></li>{{ end }}
       </ul>
    </div>
 </footer>
