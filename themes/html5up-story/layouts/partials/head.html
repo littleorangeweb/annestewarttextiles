@@ -1,0 +1,18 @@
+<head>
+   <title>{{ .Site.Title }}</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+   <!-- Social meta links to go here -->
+
+   {{- range .Site.Params.plugins }}
+   <link rel="stylesheet" href="{{ .link }}">
+   {{- end }}
+
+   {{- $styleOptions := (dict "targetPath" "assets/css/main.min.css" "outputStyle" "compressed" "enableSourceMap" false) }}
+   {{- $style := resources.Get "scss/main.scss" | resources.ToCSS $styleOptions }}
+   <link rel="stylesheet" href="{{ ($style).RelPermalink }}" />
+
+   {{- $noscriptOptions := (dict "targetPath" "assets/css/noscript.min.css" "outputStyle" "compressed" "enableSourceMap" false) }}
+   {{- $noscript := resources.Get "scss/noscript.scss" | resources.ToCSS $noscriptOptions }}
+   <noscript><link rel="stylesheet" href="{{ ($noscript).RelPermalink }}" /></noscript>
+</head>

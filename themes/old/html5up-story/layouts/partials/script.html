@@ -1,0 +1,10 @@
+{{- $script_bundle := first 0 .Site.Params.scripts }}
+
+{{- range .Site.Params.scripts }}
+   {{- $script := resources.Get .path }}
+   {{- $script_bundle = $script_bundle | append $script }}
+{{- end }}
+
+{{- $js := $script_bundle | resources.Concat "js/bundle.js" | minify -}}
+
+<script src="{{ $js.RelPermalink }}"></script>

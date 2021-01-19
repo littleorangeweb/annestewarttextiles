@@ -1,0 +1,22 @@
+[[main]]
+name = "Home"
+url = "/"
+weight = 100
+[[main]]
+name = "Portfolio"
+url = "/portfolio/"
+weight = 200
+[[main]]
+name = "Get In Touch"
+url = "/contact/"
+weight = 500
+[[main]]
+name = "Feisty Fairies"
+parent = "Portfolio"
+url = "/portfolio/feisty-fairies/"
+weight = 100
+[[main]]
+name = "Felted Flock"
+parent = "Portfolio"
+url = "/portfolio/felted-flock/"
+weight = 200

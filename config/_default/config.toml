@@ -1,0 +1,8 @@
+baseURL = "https://determined-neumann-138ba9.netlify.app"
+languageCode = "en-us"
+title = "Anne Stewart"
+theme = "html5up-forty"
+copyright = "Anne Stewart"
+
+[params]
+   subtitle = "Textiles"

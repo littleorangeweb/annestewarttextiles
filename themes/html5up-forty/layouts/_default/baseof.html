@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head.html" . }}
+    <body class="is-preload">
+        
+        <div id="wrapper">
+            {{ partial "header.html" . }}
+            {{ partial "menu.html" . }}
+            
+            {{ block "main" . }}{{ end }}
+
+            {{ partial "footer.html" . }}
+        </div>
+        
+        {{ partial "script.html" . }}
+    </body>
+</html>

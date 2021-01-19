@@ -1,0 +1,24 @@
+{{ "<!-- Spotlight -->" | safeHTML}}
+<section id="one" class="spotlights">
+   <section>
+      {{ if .Params.image.enable }} {{ with .Params.image }}
+      {{ with .link }}
+      <a href="{{ .link }}" class="image">
+      {{ end }}
+         <img src="{{ .image }}" alt="{{ .alt }}" data-position="top center" />
+      </a>
+      {{ end }}{{ end }}
+
+      <div class="content">
+         <div class="inner">
+            <header class="major">
+               <h3>{{ .Title }}</h3>
+            </header>
+            {{ .Content }}
+            <ul class="actions">
+               <li><a href="/contact" class="button next scrolly">Contact</a></li>
+            </ul>
+         </div>
+      </div>
+   </section>
+</section>

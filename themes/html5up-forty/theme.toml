@@ -1,0 +1,14 @@
+name = "html5up-forty"
+license = "Creative Commons 3.0"
+licenselink = "https://github.com/littleorangeweb/annestewarttextiles/themes/html5up-forty/license.txt"
+homepage = "https://github.com/littleorangeweb"
+min_version = "0.78.2/extended"
+
+[author]
+  name = "littleorangeweb"
+  homepage = "https://github.com/littleorangeweb"
+
+[original]
+  name = "html5up"
+  homepage = "https://html5up.net"
+  repo = "https://html5up.net/forty"
