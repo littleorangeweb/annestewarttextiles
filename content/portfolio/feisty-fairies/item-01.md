@@ -1,8 +1,5 @@
 ---
 title: "Item 01"
-image:
-   path: "img/gallery/fulls/feisty fairies/011 (2).jpg"
-   alt: "alt text for image"
 date: 2020-12-22T13:39:20Z
 draft: false
 ---
