@@ -1,6 +1,7 @@
 ---
 title: Blue Fairy
-category: Feisty Fairies
+categories:
+  - Feisty Fairies
 image:
   path: /media/uploads/012.jpg
   alt: Blue flower fairy
