@@ -1,9 +1,14 @@
 {{ define "main" }}
 
-   {{ "<!-- Banner -->" | safeHTML}} 
+<!-- About -->
+<!-- Portfolio - Images link to portfolio sections-->
+<!-- Contact button in footer? -->
+
+   {{ "<!-- Banner -->" | safeHTML}}
+   {{ with .Params }}   
    <section id="banner" class="major">
       <div class="inner">
-         {{ $img := resources.Get .Params.image.path }}
+         {{ $img := resources.Get .image.path }}
          <span class="image">
             <img src="{{ $img.RelPermalink }}" alt="" data-postion="center center"/>
          </span>
@@ -13,7 +18,7 @@
          </header>
          <div class="content">
             <p>
-               {{- .Params.description -}}
+               {{- .description -}}
             </p>
             <ul class="actions stacked">
                <li><a href="#two" class="button fit next scrolly">Portfolio</a></li>
@@ -21,7 +26,7 @@
             </ul>
          </div>
       </div>
-   </section>
+   </section>{{ end }}
    
    <div id="main">
    {{ "<!-- About -->" | safeHTML}}
@@ -68,5 +73,10 @@
 
    {{ "<!-- Market Stall news goes here -->" | safeHTML}}
    <!-- Is this a Hugo Template to go here? -->
+
+   {{ range .Pages }}
+   
+   <a href="{{.Permalink}}">{{ .Title }}</a><br>
+   {{end}}
 
 {{ end }}

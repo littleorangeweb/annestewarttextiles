@@ -22,7 +22,5 @@
       {{- if .noscript }}</noscript>{{ end -}}
 
    {{- end }}
-   {{ if .IsHome -}}
-      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-   {{- end }}
+   {{ if .IsHome }}<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>{{ end }}
 </head>
