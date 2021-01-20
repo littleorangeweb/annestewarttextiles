@@ -2,9 +2,9 @@
 <footer id="footer">
    <div class="inner">
       <ul class="icons">
-         <li><a href="/" class="icon icon-home"><span class="label">Home</span></a></li>
-         <li><a href="/portfolio" class="icon icon-picture"><span class="label">Portfolio</span></a></li>
-         <li><a href="/contact" class="icon icon-envelope"><span class="label">Contact</span></a></li>
+         {{ range .Site.Menus.main -}}
+         <li><a href="{{ .URL }}" class="icon {{ .Pre }}"><span class="label">{{ .Name }}</span></a></li>
+         {{ end -}}
       </ul>
       
       <ul class="copyright">

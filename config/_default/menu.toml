@@ -2,21 +2,24 @@
 name = "Home"
 url = "/"
 weight = 100
+pre = "icon-home"
 [[main]]
 name = "Portfolio"
-url = "/portfolio/"
+url = "/categories/"
 weight = 200
+pre = "icon-picture"
 [[main]]
 name = "Get In Touch"
 url = "/contact/"
 weight = 500
+pre = "icon-envelope"
 [[main]]
 name = "Feisty Fairies"
 parent = "Portfolio"
-url = "/portfolio/feisty-fairies/"
+url = "/categories/feisty-fairies/"
 weight = 100
 [[main]]
 name = "Felted Flock"
 parent = "Portfolio"
-url = "/portfolio/felted-flock/"
+url = "/categories/felted-flock/"
 weight = 200

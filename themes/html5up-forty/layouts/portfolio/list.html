@@ -1,0 +1,6 @@
+{{ define "main" }}
+   <p>List template for the PORTFOLIO section</p>
+   {{ range .Pages }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}: {{ .Kind }} {{ .Dir }}</a><br>
+   {{ end }}
+{{ end }}

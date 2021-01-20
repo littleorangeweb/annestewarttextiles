@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="spotlights">
+   <section>
+      {{ with .Params.image }}
+      <a href="generic.html" class="image">
+         <img src="{{ .path }}" alt="{{ .alt }}" data-position="center center" />
+      </a>
+      {{ end }}
+
+      <div class="content">
+         <div class="inner">
+            <header class="major">
+               <h3>{{ .Title }}</h3>
+            </header>
+            {{ .Content }}
+            <ul class="actions">
+               <li><a href="generic.html" class="button">Learn more</a></li>
+            </ul>
+         </div>
+      </div>
+   </section>
+</section>
+{{ end }}

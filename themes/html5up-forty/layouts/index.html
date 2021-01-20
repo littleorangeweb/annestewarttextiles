@@ -5,7 +5,7 @@
       <div class="inner">
          {{ $img := resources.Get .Params.image.path }}
          <span class="image">
-            <img src="{{ $img.RelPermalink }}" alt="" data-postion="center center"/>
+            <img src="{{ $img.RelPermalink }}" alt="{{.Params.image.path}}" data-postion="center center"/>
          </span>
          
          <header class="major">
