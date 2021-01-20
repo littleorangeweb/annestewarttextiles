@@ -1,7 +1,7 @@
 ---
 title: Sheep
 categories:
-  - Feisty Fairies
+  - Felted Flock
 image:
   path: /media/uploads/img_7912.jpg
   alt: Flock of felted sheep
