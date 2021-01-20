@@ -2,9 +2,10 @@ backend:
   name: git-gateway
   branch: static-site-version # Branch to update
 
-media_folder: "assets/img/uploads"
-public_folder: "/media/uploads"
+media_folder: "static/images/uploads" # Media files stored in repo
+public_folder: "/images/uploads" # Base URL for uploaded media src attributes
 display_url: https://determined-neumann-138ba9.netlify.app
+publish_mode: editorial_workflow
 
 collections:
   - name: "portfolio" # Used in routes
