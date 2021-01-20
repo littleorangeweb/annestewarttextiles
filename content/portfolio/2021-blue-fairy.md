@@ -1,6 +1,5 @@
 ---
 title: Blue Fairy
-category: Feisty Fairies
 categories:
   - Feisty Fairies
 image:
