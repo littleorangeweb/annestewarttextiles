@@ -1,6 +1,7 @@
 ---
 title: Red Fairy
-category: Feisty Fairies
+categories:
+  - Feisty Fairies
 image:
   path: /media/uploads/011-2-.jpg
   alt: Red flower fairy
