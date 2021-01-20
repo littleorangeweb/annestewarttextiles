@@ -1,6 +1,5 @@
 ---
 title: Red Fairy
-category: Feisty Fairies
 categories:
   - Feisty Fairies
 image:
