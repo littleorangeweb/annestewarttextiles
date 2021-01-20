@@ -6,13 +6,28 @@ media_folder: "assets/img/uploads"
 public_folder: "/media/uploads"
 
 collections:
-  - name: "portfolio" # Used in routes
+  - name: portfolio # Used in routes
     label: "Portfolio" # Used in the UI
-    folder: "content/portfolio" # The path to the folder where the documents are stored
+    folder: "content/portfolio" # The path to Dir folder
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+    slug: "{{year}}-{{slug}}" # Filename template
+    view_groups:
+      - label: "Collection"
+        field: category
+    fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "image", widget: "image"}
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Feisty Fairies", "Felted Flock"]
+      - label: "Main Image"
+        name: "image"
+        widget: "object"
+        required: false
+        fields:
+        - {label: "Image", name: "path", widget: "image"}
+        - {label: "alt text", name: "alt", widget: "string"}
+      - {label: "Media", name: "media", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: "true"}
