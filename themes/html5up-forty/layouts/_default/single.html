@@ -1,26 +1,10 @@
 {{ define "main" }}
 
-<!-- Look at the "generic" page for layout (+ picture grid below? Gallery - click opens 'poptrox' jquery [plug-in from Strata or Multiverse theme]) -->
-
-
 {{ "<!-- Main -->" | safeHTML}}
 <div id="main" class="alt">
 
-   <!-- One -->
-      <section id="one">
-         <div class="inner">
-            {{ with .Params.image }}
-            {{ $img := resources.Get .path }}
-            <span class="image main"><img src="{{ $img.RelPermalink }}" alt="{{ .alt }}" /></span>
-            {{ end }}
-            <header class="major">
-               <h1>{{ .Title }}</h1>
-            </header>
-           
-            {{ .Content }}
-         </div>
-      </section>
+Single page template
 
 </div>
 
-{{ end }}
+{{ end }} <!-- + picture grid below? Gallery - click opens 'poptrox' jquery [plug-in from Strata or Multiverse theme] -->

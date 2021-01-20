@@ -2,8 +2,9 @@
 <footer id="footer">
    <div class="inner">
       <ul class="icons">
-         <li><a href="/contact" class="icon icon-envelope"><span class="label">Info</span></a></li>
-         <li><div data-netlify-identity-button>Login with Netlify Identity</div></li>
+         <li><a href="/" class="icon icon-home"><span class="label">Home</span></a></li>
+         <li><a href="/portfolio" class="icon icon-picture"><span class="label">Portfolio</span></a></li>
+         <li><a href="/contact" class="icon icon-envelope"><span class="label">Contact</span></a></li>
       </ul>
       
       <ul class="copyright">
@@ -11,7 +12,7 @@
             document.write(new Date().getFullYear())
          </script> {{ .Site.Copyright }}</li>
          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-         {{ if .IsHome }}<li><div data-netlify-identity-button><i class="icon icon-settings"> </i></div></li>{{ end }}
+         {{ if .IsHome }}<li><a href="/admin" class="icon icon-settings"><span class="label">Admin</span></a></li>{{ end }}
       </ul>
    </div>
 </footer>
