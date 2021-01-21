@@ -1,6 +1,6 @@
 <div class="box alt">
    <div class="row gtr-50 gtr-uniform">
-      {{ range .gallery }}
+      {{ range . }}
       <div class="col-4"><span class="image fit"><img src="{{ .path }}" alt="{{ .alt }}" /></span></div>
       {{ end }}
    </div>
