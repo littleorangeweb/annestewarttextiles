@@ -4,37 +4,53 @@ backend:
 
 media_folder: "static/images/uploads" # Media files stored in repo
 public_folder: "/images/uploads" # Base URL for uploaded media src attributes
+
 display_url: https://determined-neumann-138ba9.netlify.app
 publish_mode: editorial_workflow
 
 collections:
-  - name: "portfolio" # Used in routes
-    label: "Portfolio Items" # Used in the UI
-    folder: "content/portfolio" # The path to the Dir folder
+  - label: Feist Fairies # Used in the UI
+    name: feisty-fairies # Used in routes
+    folder: "content/portfolio/feisty-fairies" # The path to the Dir folder
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{slug}}" # Filename template
-    view_groups:
-      - label: Collection
-        field: categories
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - label: "Category"
-        name: "categories"
-        widget: "select"
-        multiple: true
-        options: ["Feisty Fairies", "Felted Flock"]
-      - label: Main image
-        name: image
-        widget: object
-        required: false
+      - {label: Title, name: title, widget: string}
+      - {label: Subtitle, name: subtitle, widget: string, required: false}
+      - {label: Main image, name: image, widget: object, required: false, fields: [
+          {label: Image, name: path, widget: image},
+          {label: alt-text, name: alt, widget: string}]}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Gallery, name: gallery, widget: list, required: false, label_singular: Image, summary: '{{fields.alt}}', collapsed: true, fields: [
+          {label: Image, name: path, widget: image},
+          {label: Title, name: alt, widget: string}]}
+      - {label: Date, name: date, widget: datetime}
+  - name: pages
+    label: Pages
+    files:
+      - file: "content/_index.md"
+        label: Home Page
+        name: home
         fields:
-          - label: Image
-            name: path
-            widget: image
-          - label: alt-text
-            name: alt
-            widget: string
-      - {label: "Media", name: "media", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string, required: false}
+        - {label: Main image, name: image, widget: object, required: false, fields: [
+          {label: Image, name: path, widget: image},
+          {label: alt-text, name: alt, widget: string}]}
+        - {label: Date, name: date, widget: datetime, hidden: true}
+      - file: "content/about/_index.md"
+        label: About Me
+        name: about
+        fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string, required: false}
+        - {label: Body, name: body, widget: markdown}
+        - {label: Date, name: date, widget: datetime, hidden: true}
+      - file: "content/portfolio/_index.md"
+        label: Portfolio Page
+        name: portfolio
+        fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string, required: false}
+        - {label: Body, name: body, widget: markdown}
+        - {label: Date, name: date, widget: datetime, hidden: true}

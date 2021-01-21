@@ -23,3 +23,8 @@ name = "Felted Flock"
 parent = "Portfolio"
 url = "/categories/felted-flock/"
 weight = 200
+[[main]]
+name = "Quilts and Cushions"
+parent = "Portfolio"
+url = "/categories/Quilts and Cushions/"
+weight = 300
