@@ -1,7 +1,18 @@
 {{ define "main" }}
-   <p>List template for the PORTFOLIO section</p>
-   {{ .Content }}
+   {{ partial "content-block.html" . }}
+
+   {{ "<!-- Tiles -->" | safeHTML}}
+   <section class="tiles">
    {{ range .Pages }}
-      <a href="{{ .RelPermalink }}">{{ .Title }}: {{ .Kind }} {{ .Dir }}</a><br>
+   <article>
+      <span class="image">
+         <img src="{{ .Params.image.path }}" alt="{{ .Params.image.alt }}" />
+      </span>
+      <header class="major">
+         <h3><a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a></h3>
+         <p>{{ .Params.subtitle }}</p>
+      </header>
+   </article>
    {{ end }}
+   </section>
 {{ end }}
