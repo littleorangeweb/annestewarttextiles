@@ -5,3 +5,6 @@ theme = "html5up-forty"
 copyright = "Anne Stewart"
 
 disableKinds = ["taxonomy", "term"]
+
+[params]
+subtitle = "Textiles"

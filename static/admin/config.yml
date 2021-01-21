@@ -9,11 +9,12 @@ display_url: https://determined-neumann-138ba9.netlify.app
 publish_mode: editorial_workflow
 
 collections:
-  - label: Feisty Fairies # Used in the UI
-    name: feisty-fairies # Used in routes
-    folder: "content/portfolio/feisty-fairies" # The path to the Dir folder
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{slug}}" # Filename template
+  - label: Feisty Fairies
+    name: feisty-fairies
+    folder: "content/portfolio/feisty-fairies"
+    preview_path: "/portfolio/feisty-fairies/{{filename}}"
+    create: true
+    slug: "{{year}}-{{slug}}"
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Main image, name: image, widget: object, required: false, fields: [
@@ -27,6 +28,7 @@ collections:
   - label: Felted Flock
     name: felted-flock
     folder: "content/portfolio/felted-flock"
+    preview_path: "/portfolio/felted-flock/{{filename}}"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
@@ -42,6 +44,7 @@ collections:
   - label: Quilts and Cushions
     name: quilts-and-cushions
     folder: "content/portfolio/quilts-and-cushions"
+    preview_path: "/portfolio/quilts-and-cushions/{{filename}}"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
@@ -60,24 +63,30 @@ collections:
       - file: "content/_index.md"
         label: Home Page
         name: home
+        editor:
+          preview: false
         fields:
         - {label: Title, name: title, widget: string}
         - {label: Subtitle, name: subtitle, widget: string, required: false}
-        - {label: Main image, name: image, widget: object, required: false, fields: [
+        - {label: Main image, name: image, widget: object, required: false, collapsed: true, fields: [
           {label: Image, name: path, widget: image},
           {label: alt-text, name: alt, widget: string}]}
-        - {label: Date, name: date, widget: datetime, hidden: true}
-      - file: "content/about/_index.md"
-        label: About Me
-        name: about
-        fields:
-        - {label: Title, name: title, widget: string}
-        - {label: Subtitle, name: subtitle, widget: string, required: false}
-        - {label: Body, name: body, widget: markdown}
-        - {label: Date, name: date, widget: datetime, hidden: true}
+        - label: About
+          name: about
+          widget: object
+          fields:
+            - label: Heading
+              name: title
+              widget: string
+            - label: Body
+              name: body
+              widget: markdown
+        - {label: Date, name: date, widget: datetime,}
       - file: "content/portfolio/_index.md"
         label: Portfolio Page
         name: portfolio
+        editor:
+          preview: false
         fields:
         - {label: Title, name: title, widget: string}
         - {label: Subtitle, name: subtitle, widget: string, required: false}
@@ -86,6 +95,8 @@ collections:
       - file: "content/contact/_index.md"
         label: Contact Page
         name: contact
+        editor:
+          preview: false
         fields:
         - {label: Title, name: title, widget: string}
         - {label: Subtitle, name: subtitle, widget: string, required: false}

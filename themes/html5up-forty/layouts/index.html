@@ -3,36 +3,36 @@
    {{ "<!-- Banner -->" | safeHTML}} 
    <section id="banner" class="major">
       <div class="inner">
-         {{ $img := resources.Get .Params.image.path }}
+         {{ with .Params.image }}
          <span class="image">
-            <img src="{{ $img.RelPermalink }}" alt="{{.Params.image.path}}" data-postion="center center"/>
+            <img src="{{ .path }}" alt="{{ .alt }}" data-postion="center center"/>
          </span>
-         
+         {{ end }}
          <header class="major">
             <h1>{{ .Site.Title }}</h1>
          </header>
          <div class="content">
             <p>
-               {{- .Params.description -}}
+               {{- .Params.subtitle -}}
             </p>
-            <ul class="actions stacked">
-               <li><a href="#two" class="button fit next scrolly">Portfolio</a></li>
-               <li><a href="#two" class="button fit next scrolly">Market Stall</a></li>
-            </ul>
          </div>
       </div>
    </section>
    
    <div id="main">
+   
+   {{ with .Params.about }}
    {{ "<!-- About -->" | safeHTML}}
-      <section id="one">
-         <div class="inner">
-            <header class="major">
-               <h3>{{ .Title }}</h3>
-            </header>
-            {{ .Content }}
-         </div>
-      </section>
+   <section id="one">
+      <div class="inner">
+         <header class="major">
+            <h3>{{ .title }}</h3>
+         </header>
+         {{ .body | markdownify }}
+      </div>
+   </section>
+   {{ end }}
+      
 
    {{ "<!-- Tiles -->" | safeHTML}}
       <section id="two" class="tiles">
