@@ -9,11 +9,41 @@ display_url: https://determined-neumann-138ba9.netlify.app
 publish_mode: editorial_workflow
 
 collections:
-  - label: Feist Fairies # Used in the UI
+  - label: Feisty Fairies # Used in the UI
     name: feisty-fairies # Used in routes
     folder: "content/portfolio/feisty-fairies" # The path to the Dir folder
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{slug}}" # Filename template
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Main image, name: image, widget: object, required: false, fields: [
+          {label: Image, name: path, widget: image},
+          {label: alt-text, name: alt, widget: string}]}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Gallery, name: gallery, widget: list, required: false, label_singular: Image, summary: '{{fields.alt}}', collapsed: true, fields: [
+          {label: Image, name: path, widget: image},
+          {label: Title, name: alt, widget: string}]}
+      - {label: Date, name: date, widget: datetime}
+  - label: Felted Flock
+    name: felted-flock
+    folder: "content/portfolio/felted-flock"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Main image, name: image, widget: object, required: false, fields: [
+          {label: Image, name: path, widget: image},
+          {label: alt-text, name: alt, widget: string}]}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Gallery, name: gallery, widget: list, required: false, label_singular: Image, summary: '{{fields.alt}}', collapsed: true, fields: [
+          {label: Image, name: path, widget: image},
+          {label: Title, name: alt, widget: string}]}
+      - {label: Date, name: date, widget: datetime}
+  - label: Quilts and Cushions
+    name: quilts-and-cushions
+    folder: "content/portfolio/quilts-and-cushions"
+    create: true
+    slug: "{{year}}-{{slug}}"
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Main image, name: image, widget: object, required: false, fields: [
