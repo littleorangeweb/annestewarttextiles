@@ -5,7 +5,7 @@ weight = 100
 pre = "icon-home"
 [[main]]
 name = "Portfolio"
-url = "/categories/"
+url = "/portfolio/"
 weight = 200
 pre = "icon-picture"
 [[main]]
@@ -16,15 +16,15 @@ pre = "icon-envelope"
 [[main]]
 name = "Feisty Fairies"
 parent = "Portfolio"
-url = "/categories/feisty-fairies/"
+url = "/portfolio/feisty-fairies/"
 weight = 100
 [[main]]
 name = "Felted Flock"
 parent = "Portfolio"
-url = "/categories/felted-flock/"
+url = "/portfolio/felted-flock/"
 weight = 200
 [[main]]
 name = "Quilts and Cushions"
 parent = "Portfolio"
-url = "/categories/Quilts and Cushions/"
+url = "/portfolio/quilts-and-cushions/"
 weight = 300

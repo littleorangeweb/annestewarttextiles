@@ -16,7 +16,6 @@ collections:
     slug: "{{year}}-{{slug}}" # Filename template
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: Subtitle, name: subtitle, widget: string, required: false}
       - {label: Main image, name: image, widget: object, required: false, fields: [
           {label: Image, name: path, widget: image},
           {label: alt-text, name: alt, widget: string}]}

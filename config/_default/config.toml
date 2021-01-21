@@ -4,5 +4,4 @@ title = "Anne Stewart"
 theme = "html5up-forty"
 copyright = "Anne Stewart"
 
-[params]
-   subtitle = "Textiles"
+disableKinds = ["taxonomy", "term"]
