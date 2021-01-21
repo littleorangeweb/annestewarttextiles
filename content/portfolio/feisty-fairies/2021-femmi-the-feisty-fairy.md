@@ -1,7 +1,7 @@
 ---
 title: Femmi the Feisty Fairy
 image:
-  path: https://res.cloudinary.com/littleorangeweb774/image/upload/v1611195196/sample.jpg
+  path: https://res.cloudinary.com/feistyfairies367/image/upload/v1611245018/samples/sheep.jpg
   alt: Short description of your image
 gallery:
   - path: https://res.cloudinary.com/littleorangeweb774/image/upload/v1611195205/samples/landscapes/girl-urban-view.jpg
