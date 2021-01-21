@@ -1,11 +1,11 @@
 {{ define "main" }}
 <section class="spotlights">
    <section>
-      {{ with .Params.image }}
-      <a href="generic.html" class="image">
+      {{ with .Params.image -}}
+      <span class="image">
          <img src="{{ .path }}" alt="{{ .alt }}" data-position="center center" />
-      </a>
-      {{ end }}
+      </span>
+      {{ end -}}
 
       <div class="content">
          <div class="inner">
@@ -13,11 +13,11 @@
                <h3>{{ .Title }}</h3>
             </header>
             {{ .Content }}
-            <ul class="actions">
-               <li><a href="generic.html" class="button">Learn more</a></li>
-            </ul>
          </div>
       </div>
    </section>
 </section>
+{{ with .gallery -}}
+   {{ partial "gallery.html" . }}
+{{ end -}}
 {{ end }}

@@ -54,3 +54,11 @@ collections:
         - {label: Subtitle, name: subtitle, widget: string, required: false}
         - {label: Body, name: body, widget: markdown}
         - {label: Date, name: date, widget: datetime, hidden: true}
+      - file: "content/contact/_index.md"
+        label: Contact Page
+        name: contact
+        fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Subtitle, name: subtitle, widget: string, required: false}
+        - {label: Body, name: body, widget: markdown}
+        - {label: Date, name: date, widget: datetime, hidden: true}
